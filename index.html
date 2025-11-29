@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_v2.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+    <div id="network-status" class="status-bar">🟢 Online Mode — AI Chat Enabled</div>
+
+    <div class="container">
+        <h1>Alexa</h1>
+        <div id="chat-box"></div>
+        <input type="text" id="user-input" placeholder="Type your command...">
+        
+        <div class="button-group">
+            <button id="send-btn">Send</button>
+            <button id="mic-btn">Speak</button>
+            <button id="exportBtn">📤 Export Chat</button>
+        </div>
+    </div>
+
+    <!-- Link external JS file -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
